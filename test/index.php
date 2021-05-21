@@ -4,7 +4,8 @@ require __DIR__ . '/../vendor/autoload.php';
 
 use Notification\Email;
 
-$novoEmail = new Email(2, "smtp.office365.com", "cursojoao@outlook.com", "joaocurso1010", "starttls", "587", "cursojoao@outlook.com", "Equipe Jao");
-$novoEmail->sendMail("So pra saber se vc me ama", "<p> Eu amo voce com todo meu coração <b>casa cmg?</b></p>", "cursojoao@outlook.com", "Joao Vitor", "biaaraujocampos@icloud.com", "Joao");
+$email = new Email (2, "mail.host.com", "your@email.com", "your-pass", "smtp secure (tls / ssl)", "port (587)", "from@email.com", "From Name");
+
+$email-> sendEmail ("Subject", "Content", "reply@email.com", "Replay Name", "address@email.com", "Address Name");
 
 var_dump($novoEmail);
